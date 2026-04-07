@@ -50,7 +50,7 @@ func busqueda() {
 	if encontrado {
 		fmt.Println("Valor encontrado")
 	} else {
-		fmt.Println("El valor NO se encuentra en el arreglo")
+		fmt.Println("El valor no se encuentra en el arreglo")
 	}
 }
 
@@ -68,6 +68,16 @@ func imprimirTabla() {
 			fila += fmt.Sprintf("%d ", matriz[i][j])
 		}
 		fmt.Println(fila)
+	}
+}
+func recorrerPorColumna() {
+	fmt.Println("Recorrido por columna:")
+	for j := 0; j < 3; j++ {
+		fmt.Printf("Columna %d: ", j)
+		for i := 0; i < 3; i++ {
+			fmt.Printf("%d ", matriz[i][j])
+		}
+		fmt.Println()
 	}
 }
 
@@ -113,6 +123,8 @@ func main() {
 	// MATRIZ
 	fmt.Println("\nMatriz original:")
 	imprimirTabla()
+
+	recorrerPorColumna()
 
 	fmt.Println()
 	sumar()
